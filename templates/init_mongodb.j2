@@ -22,7 +22,7 @@ RETVAL=0
 
 start() {
 	echo -n $"Starting $prog: "
-	daemon $mongod "-f $OPTIONS"
+	su {{ mongodb_user }} -c "$mongod -f $OPTIONS"
 	RETVAL=$?
 	echo
 	[ $RETVAL -eq 0 ] && touch /var/lock/subsys/$prog

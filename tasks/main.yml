@@ -14,23 +14,24 @@
 - name: download MongoDB/TokuMX
   get_url: url={{ mongodb_binaries_url }} dest=/opt mode=0440
 - unarchive: src=/opt/{{ mongodb_binaries_file }} dest=/opt copy=no
-- file: src=/opt/{{ mongodb_binaries_dir }} dest={{ mongodb_symlink }} state=link
+- file: path=/opt/{{ mongodb_binaries_dir }} owner={{ mongodb_user }} group={{ mongodb_group }}
+- file: src=/opt/{{ mongodb_binaries_dir }} dest={{ mongodb_symlink }} state=link owner={{ mongodb_user }} group={{ mongodb_group }}
 
 # system settings, specific to DB
 - command: "echo never > /sys/kernel/mm/transparent_hugepage/enabled"
 
 # config and init files, directories
 - name: Create the mongodb startup file
-  template: src=init_mongodb.j2 dest=/etc/init.d/mongodb mode=0655
+  template: src=init_mongodb.j2 dest=/etc/init.d/mongodb mode=0655 owner={{ mongodb_user }} group={{ mongodb_group }}
 
 - name: Create the data directory
-  file: path={{ mongodb_datadir_prefix }} state=directory owner=mongodb group=mongodb
+  file: path={{ mongodb_datadir_prefix }} state=directory owner={{ mongodb_user }} group={{ mongodb_group }}
 
 - name: Create the config directory
-  file: path=/etc/mongodb state=directory owner=mongodb group=mongodb
+  file: path=/etc/mongodb state=directory owner={{ mongodb_user }} group={{ mongodb_group }}
 
 - name: Create the mongodb configuration file
-  template: src=mongodb_conf.j2 dest={{mongodb_config_location}}{{mongodb_config_file_name}} mode=0655
+  template: src=mongodb_conf.j2 dest={{mongodb_config_location}}{{mongodb_config_file_name}} mode=0655 owner={{ mongodb_user }} group={{ mongodb_group }}
 
 # start it up
 - service: name=mongodb state=started
