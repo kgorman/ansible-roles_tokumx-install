@@ -1,2 +1,20 @@
 ---
 # defaults file for ansible-roles_tokumx-install
+
+# The port for mongodb server
+mongod_port: 9005
+
+# The directory prefix where the database files would be stored
+mongodb_datadir_prefix: /data/mongodb/
+
+# The password for admin user
+mongodb_admin_pass: dba
+
+# The password for admin user
+mongodb_admin_user: dba
+
+# TokuMX cache size
+mongodb_cache_size: 99000M
+
+# TokuMX default compression (quicklz, none, zlib, lzma)
+mongodb_default_compression: quicklz

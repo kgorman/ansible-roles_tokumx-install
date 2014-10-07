@@ -6,7 +6,7 @@ Installs [TokuMX](http://www.tokutek.com/tokumx-for-mongodb/) and starts up a ni
 Role Variables
 --------------
 
-You will want to hack on the variables in vars/mail.yml to fit your liking. One thing you will absolutely want to change is:
+You will want to hack on the variables in defaults/main.yml to fit your liking. One thing you will absolutely want to change is:
 
 ```yaml
 TokuMX cache size

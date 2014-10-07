@@ -5,18 +5,6 @@
 mongodb_user: mongodb
 mongodb_group: mongodb
 
-# The port for mongodb server
-mongod_port: 9005
-
-# The directory prefix where the database files would be stored
-mongodb_datadir_prefix: /data/mongodb/
-
-# The password for admin user
-mongodb_admin_pass: dba
-
-# The password for admin user
-mongodb_admin_user: dba
-
 # MongoDB config files location
 mongodb_config_location: /etc/mongodb/
 
@@ -29,9 +17,3 @@ mongodb_binaries: /opt/mongodb/
 mongodb_binaries_file: tokumx-2.0.0-linux-x86_64-main.tar.gz
 mongodb_binaries_dir: tokumx-2.0.0-linux-x86_64
 mongodb_binaries_url: https://s3.amazonaws.com/tokumx-2.0.0/tokumx-2.0.0-linux-x86_64-main.tar.gz
-
-# TokuMX cache size
-mongodb_cache_size: 99000M
-
-# TokuMX default compression
-mongodb_default_compression: quicklz
