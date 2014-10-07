@@ -1,7 +1,7 @@
 ansible-roles_tokumx_install
 =========
 
-Installs TokuMX and starts up a nice base configuration that should be pre-set for high performance. TokuMX is a high performance fork of the popular MongoDB.
+Installs [TokuMX](http://www.tokutek.com/tokumx-for-mongodb/) and starts up a nice base configuration that should be pre-set for high performance. TokuMX is a high performance fork of the popular MongoDB.
 
 Role Variables
 --------------
