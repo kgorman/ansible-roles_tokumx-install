@@ -60,4 +60,5 @@ BSD
 Author Information
 ------------------
 [Twitter](http://www.twitter.com/kennygorman)
-[Github](www.github.com/kgorman)
+
+[Github](https://github.com/kgorman)
