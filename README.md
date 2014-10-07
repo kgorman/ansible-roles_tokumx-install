@@ -52,11 +52,10 @@ uname -a | awk '{print $3}'
 3.10.0-123.el7.x86_64
 ```
 
-
 License
 -------
 
-Apache
+BSD
 
 Author Information
 ------------------

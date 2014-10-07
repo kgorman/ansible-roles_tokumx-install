@@ -2,8 +2,8 @@
 galaxy_info:
   author: Kenny Gorman
   description: Install and setup TokuMX database
-  company: Rackspace
-  license: Apache
+  company: Rackspace US Inc.
+  license: BSD
   min_ansible_version: 1.2
   platforms:
   - name: EL
@@ -14,6 +14,7 @@ galaxy_info:
     - all
  categories:
   - system
-  - web
+  - cloud:rax
   - database
   - database:nosql
+dependencies: []
