@@ -6,10 +6,16 @@ Installs [TokuMX](http://www.tokutek.com/tokumx-for-mongodb/) and starts up a ni
 Role Variables
 --------------
 
-You will want to hack on the variables in defaults/main.yml to fit your liking. One thing you will absolutely want to change is:
+You will want to hack on the variables in defaults/main.yml to fit your liking. Things you will most likely want to change are:
 
 ```yaml
-TokuMX cache size
+# The port for mongodb server
+mongodb_port: 9005
+
+# The directory prefix where the database files would be stored
+mongodb_datadir_prefix: /data/mongodb/
+
+#TokuMX cache size
 mongodb_cache_size: 99000M
 ```
 
