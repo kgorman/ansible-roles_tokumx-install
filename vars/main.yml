@@ -9,7 +9,10 @@ mongodb_group: mongodb
 mongodb_config_location: /etc/mongodb/
 
 # MongoDB config file name
-mongodb_config_file_name: tokumx{{ mongod_port }}.conf
+mongodb_config_file_name: tokumx{{ mongodb_port }}.conf
+
+# MongoDB keyfile name
+mongodb_keyfile_name: mongodb_{{ mongodb_port}}.keyfile
 
 # MongoDB binaries
 mongodb_symlink: /opt/mongodb
