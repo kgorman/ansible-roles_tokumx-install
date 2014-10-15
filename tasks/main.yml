@@ -1,9 +1,6 @@
 ---
 # tasks file for ansible-roles_tokumx-install
 
-# ensure nothing is running now, we don't want to ruin folks databases accidentially.
-#- service: name=mongodb state=stopped
-
 # ensure base users/groups, and software
 - group: name={{ mongodb_group }} state=present
 - user: name={{ mongodb_user }} comment="mongodb user" uid=1040 group={{ mongodb_group }}
@@ -40,4 +37,4 @@
 - service: name=mongodb state=started
 
 # create an initial DBA user, if auth is enabled we are now secured.
-- mongodb_user: database=admin name=dba password=dba state=present login_port={{ mongodb_port }}
+- mongodb_user: database=admin name={{ mongodb_admin_user }} password={{ mongodb_admin_pass }} state=present login_port={{ mongodb_port }}
