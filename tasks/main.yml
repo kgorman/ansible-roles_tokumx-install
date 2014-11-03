@@ -5,6 +5,7 @@
 - group: name={{ mongodb_group }} state=present
 - user: name={{ mongodb_user }} comment="mongodb user" uid=1040 group={{ mongodb_group }}
 - yum: name=python-pip state=latest
+- yum: name=numactl state=latest
 - pip: name=pymongo
 
 # get the binaries

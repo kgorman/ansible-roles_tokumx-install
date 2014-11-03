@@ -17,7 +17,7 @@ mongodb_admin_user: dba
 mongodb_cache_size: 99000M
 
 # TokuMX default compression (quicklz, none, zlib, lzma)
-mongodb_default_compression: quicklz
+mongodb_default_compression: none
 
 # Keyfile key. Not needed with simple setups, but anytime there is Auth+RS sharding it's needed
 # see: http://docs.mongodb.org/manual/tutorial/generate-key-file/

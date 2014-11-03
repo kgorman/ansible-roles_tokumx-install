@@ -1,7 +1,7 @@
 ansible-roles_tokumx_install
 =========
 
-Installs [TokuMX](http://www.tokutek.com/tokumx-for-mongodb/) and starts up a nice base configuration that should be pre-set for high performance. TokuMX is a high performance fork of the popular MongoDB.
+Installs [TokuMX](http://www.tokutek.com/tokumx-for-mongodb/) and starts up a nice base configuration with security enabled that should be pre-set for high performance. TokuMX is a high performance fork of the popular MongoDB.
 
 Role Variables
 --------------
@@ -17,6 +17,13 @@ mongodb_datadir_prefix: /data/mongodb/
 
 #TokuMX cache size
 mongodb_cache_size: 99000M
+
+# The password for admin user
+mongodb_admin_pass: xxx
+
+# The password for admin user
+mongodb_admin_user: yyy
+
 ```
 
 It's generally recommended to set this to about 80%-90% of main memory on a dedicated DB box.
